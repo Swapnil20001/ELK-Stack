@@ -1,5 +1,5 @@
-        - index: "123-%{+yyyy.MM.dd}"
-            when:
-              and:
-                - equals:
-                    log.file.path: /opt/log/321.log
+        - index: "demo-%{+yyyy.MM.dd}"
+          when:
+            and:
+              - equals:
+                  log.file.path: /opt/log/demp-path.log
