@@ -1,5 +1,5 @@
-        - index: "abd-%{+yyyy.MM.dd}"
+        - index: "xyz-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/abd.log
+                  log.file.path: /opt/log/xyz.log
