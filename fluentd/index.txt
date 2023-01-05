@@ -1,5 +1,5 @@
-    - index: "swap-%{+yyyy.MM.dd}"
-        when:
-          and:
-            - equals:
-                log.file.path: /opt/log/nil.log
+        - index: "a-%{+yyyy.MM.dd}"
+            when:
+              and:
+                - equals:
+                    log.file.path: /opt/log/b.log
