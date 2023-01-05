@@ -1,0 +1,5 @@
+        - index: "abc-%{+yyyy.MM.dd}"
+          when:
+            and:
+              - equals:
+                  log.file.path: /opt/log/abc.log
