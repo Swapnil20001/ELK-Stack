@@ -17,6 +17,11 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch.log.svc.cluster.local.}:${ELASTICSEARCH_PORT:9200}']
       ssl.verification_mode: none
       indices:
+        - index: "sample1-%{+yyyy.MM.dd}"
+          when:
+            and:
+              - equals:
+                  log.file.path: /opt/log/sample_path.log
         - index: "sample-%{+yyyy.MM.dd}"
           when:
             and:

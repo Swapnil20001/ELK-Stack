@@ -1,4 +1,4 @@
-        - index: "sample-%{+yyyy.MM.dd}"
+        - index: "sample1-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
