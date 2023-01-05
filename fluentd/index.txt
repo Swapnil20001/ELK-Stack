@@ -1,5 +1,5 @@
-        - index: "qwe-%{+yyyy.MM.dd}"
+        - index: "a-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/qwe.log
+                  log.file.path: /opt/log/b.log
