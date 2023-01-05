@@ -1,5 +1,5 @@
-        - index: "demo-%{+yyyy.MM.dd}"
+        - index: "test-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/demo-path.log
+                  log.file.path: /opt/log/test-path.log
