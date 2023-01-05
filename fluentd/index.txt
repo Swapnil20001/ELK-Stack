@@ -1,5 +1,5 @@
-        - index: "sad-%{+yyyy.MM.dd}"
+        - index: "qwe-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/ad.log
+                  log.file.path: /opt/log/qwe.log
