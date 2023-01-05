@@ -1,0 +1,5 @@
+- index: "demo-%{+yyyy.MM.dd}"
+    when:
+      and:
+        - equals:
+            log.file.path: /opt/log/demo-data4.log
