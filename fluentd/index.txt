@@ -1,5 +1,5 @@
-        - index: "testing-%{+yyyy.MM.dd}"
+        - index: "sad-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/test.log
+                  log.file.path: /opt/log/ad.log
