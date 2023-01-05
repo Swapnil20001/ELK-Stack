@@ -2,4 +2,4 @@
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/demp-path.log
+                  log.file.path: /opt/log/demo-path.log
