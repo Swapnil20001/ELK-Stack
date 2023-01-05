@@ -1,5 +1,5 @@
-        - index: "xyz-%{+yyyy.MM.dd}"
+        - index: "grafana-%{+yyyy.MM.dd}"
           when:
             and:
               - equals:
-                  log.file.path: /opt/log/xyz.log
+                  log.file.path: /opt/log/grafana.log
