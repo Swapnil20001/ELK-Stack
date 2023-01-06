@@ -17,6 +17,11 @@ data:
       hosts: ['${ELASTICSEARCH_HOST:elasticsearch.log.svc.cluster.local.}:${ELASTICSEARCH_PORT:9200}']
       ssl.verification_mode: none
       indices:
+        - index: "final-%{+yyyy.MM.dd}"
+          when:
+            and:
+              - equals:
+                  log.file.path: /opt/log/final.log
         - index: "grafana-%{+yyyy.MM.dd}"
           when:
             and:
