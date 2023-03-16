@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: elasticsearch-cronjob
+  namespace: log
+spec:
+  schedule: "0 1 * * *"
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - image: 430061227187.dkr.ecr.ap-south-1.amazonaws.com/elasticsearch:alpine
+            name: elasticsearch-cronjob
+            command: ["/bin/sh","-c"]
+            args: ["apk add curl && apk add coreutils && curl -u elastic:M0sZfTj47u7ONuKx8pyN -X DELETE  http://elasticsearch.log.svc.cluster.local:9200/*-`date -d'10 days ago' +'%Y.%m.%d'`"]
+          restartPolicy: OnFailure
